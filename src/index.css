@@ -1,13 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto';
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1, h2, h3 {
+  margin: 0.5rem 0;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+h3 { 
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.App {
+  text-align: center;
+}
+
+body {
+  font-family: 'Roboto';
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row.center {
+  align-items: center;
+  margin-top: 8px;
+}
+
+.col-1 {
+  flex: 1;
+}
+
+.col-2 {
+  flex: 2;
+}
+
+.block {
+  background-color: #e0e0e0;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.img.small {
+  max-height: 8rem;
+}
+
+.button {
+  font-size: 0.8rem;
+  padding: 0.2rem;
+  margin: 0.1rem;
+  border-radius: 1rem;
+  border: 0.1rem #404040 solid;
+  background-color: #4076FA;
+  color: #fff;
+  width: 75%;
+  cursor: pointer;
+  outline: none;
+}
+
+.button.add {
+  background-color: #4076FA;
+  width: 1.5rem;
+  outline: none;
+}
+
+.button.remove {
+  background-color: #E8C547;
+  width: 1.5rem;
+  outline: none;
+}
+
+.button.cart {
+  margin-left: 10px;
+  background-color: #F15025;
+  width: 3rem;
+  border: none;
+  color: white;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-sides-10 {
+  padding: 0px 10px;
+}
+
+.image-custom {
+  width: 150px;
+  height: 150px;
+}
+
+.summary {
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
