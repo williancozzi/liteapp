@@ -7,9 +7,9 @@ export default function Cart(props) {
         acc + cur.price * cur.quantity, 0);
 
     return (
-        <aside className="block col-1">
+        <aside className="block col-1 summary">
             <h2>Sumário da compra</h2>
-            <div className="summary">
+            <div className="center-flex">
                 {cartItems.length === 0 &&
                     <div>Seu carrinho está vazio
                         <div>
@@ -19,12 +19,20 @@ export default function Cart(props) {
             </div>
             {cartItems.map((item) => {
                 return <div key={item.id} className="row center">
-                    <div className="col-2">{item.name}</div>
-                    <div className="col-2">
-                        <button onClick={() => onAddItem(item)} className="button add">+</button>
-                        <button onClick={() => onRemoveItem(item)} className="button remove">-</button>
+                    <div className="col-3 product-name">{item.name}</div>
+                    <div className="col-3 product-actions">
+                        <button onClick={() => onAddItem(item)} className="button add">
+                            <span className="plus center-flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" fill="white" /></svg>
+                            </span>
+                        </button>
+                        <button onClick={() => onRemoveItem(item)} className="button remove">
+                            <span className="minus center-flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path d="M0 10h24v4h-24z" fill="black" /></svg>
+                            </span>
+                        </button>
                     </div>
-                    <div className="col-2 text-right">
+                    <div className="col-3 text-right">
                         {item.quantity} x R${item.price.toFixed(2)}
                     </div>
                 </div>
@@ -32,12 +40,12 @@ export default function Cart(props) {
             {cartItems.length !== 0 && (
                 <>
                     <hr></hr>
-                    <div className="row">
+                    <div className="row p-15">
                         <div className="col-2 text-right"><strong>Valor total:</strong></div>
                         <div className="col-1 text-right"><strong>R${totalPrice.toFixed(2)}</strong></div>
                     </div>
                     <hr />
-                    <div className="row justify-center">
+                    <div className="row justify-center p-15">
                         <button className="button" onClick={() => console.log("saiu")}>
                             Continuar
                         </button>

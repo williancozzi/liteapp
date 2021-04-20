@@ -5,10 +5,8 @@ export default function Header(props) {
 
     return (
         <header className="between block center">
-            <div>
-                <a href="#/">
-                    <h1 className="p-sides-10">Shopping - Lite </h1>
-                </a>
+            <div className="align-center">
+                <img src="https://lite.arquivei.com.br/static/logo-dark.svg" alt="logo arquivei" />
             </div>
             <div className="p-sides-10">
                 <a href="#/cart">

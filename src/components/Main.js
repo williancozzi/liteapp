@@ -5,7 +5,7 @@ export default function Main(props) {
     const { products, onAddItem } = props;
 
     return (
-        <main className="block col-2">
+        <main className="block col-3">
             {products && <h2>Produtos</h2>}
             <div className="row">
                 {products.map((item) => {
