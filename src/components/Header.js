@@ -19,17 +19,18 @@ export default function Header(props) {
                         
                         <Link to={"/checkout"} >
                             <div className="center-flex">
-                            <span className="a mr-10">Sua cesta</span>
+                            <span className="a">Sua cesta</span>
                                 <span className="cart-count">{cartCount}</span>
-                                <img src={basketSvg} width="30" height="30" alt="basket"></img>
+                                <img src={basketSvg} width="30" height="30" alt="basket" className="p-10"></img>
 
                             </div>
                         </Link>
 
                     ) : (
                         <div className="center-flex">
-                            <span className="a mr-10">Sua cesta</span>
-                            <img src={emptyBasketSvg} width="30" height="30" alt="basket"></img>
+                            <span className="a">Sua cesta</span>
+                            <span className="cart-count blue">0</span>
+                            <img src={emptyBasketSvg} width="30" height="30" alt="basket" className="p-10"></img>
                         </div>
 
                     )}
