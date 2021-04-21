@@ -111,12 +111,16 @@ a {
   outline: none;
 }
 
-.button.cart {
-  margin-left: 10px;
+.button-cart {
   background-color: #4076FA;
-  width: 3rem;
+  width: 20px;
+  height: 20px;
   border: none;
+  border-radius: 20px;
   color: white;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .text-right {
@@ -175,4 +179,13 @@ a {
 .summary {
   border-left: 1px solid #e0e0e0;
   border-radius: 0px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
 }

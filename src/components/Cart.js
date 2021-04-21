@@ -9,7 +9,7 @@ export default function Cart(props) {
     return (
         <aside className="block col-1 summary">
             <h2>Sumário da compra</h2>
-            <div className="center-flex">
+            <div className="center-flex mt-20">
                 {cartItems.length === 0 &&
                     <div>Seu carrinho está vazio
                         <div>
