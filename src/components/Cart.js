@@ -1,5 +1,6 @@
 import React from 'react'
 import bag from '../assets/bag.png';
+import { Link } from "react-router-dom";
 
 export default function Cart(props) {
     const { cartItems, onAddItem, onRemoveItem } = props;
@@ -9,18 +10,18 @@ export default function Cart(props) {
     return (
         <aside className="block col-1 summary">
             <h2>Sumário da compra</h2>
-            <div className="center-flex mt-20">
+            <div className="center-flex mt-40">
                 {cartItems.length === 0 &&
-                    <div>Seu carrinho está vazio
+                    <div className="basket">Sua cesta está vazia
                         <div>
                             <img src={bag} alt={'empty bag'} className="image-custom" />
                         </div>
                     </div>}
             </div>
             {cartItems.map((item) => {
-                return <div key={item.id} className="row center">
-                    <div className="col-3 product-name">{item.name}</div>
-                    <div className="col-3 product-actions">
+                return <div key={item.id} className="row center product-content">
+                    <div className="product-name">{item.name}</div>
+                    <div className="product-actions">
                         <button onClick={() => onAddItem(item)} className="button add">
                             <span className="plus center-flex">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" fill="white" /></svg>
@@ -32,7 +33,7 @@ export default function Cart(props) {
                             </span>
                         </button>
                     </div>
-                    <div className="col-3 text-right">
+                    <div className="text-right calc">
                         {item.quantity} x R${item.price.toFixed(2)}
                     </div>
                 </div>
@@ -46,9 +47,13 @@ export default function Cart(props) {
                     </div>
                     <hr />
                     <div className="row justify-center p-15">
-                        <button className="button" onClick={() => console.log("saiu")}>
-                            Continuar
-                        </button>
+
+                        <Link to={"/checkout"} className="link button">
+                            <button className="button">
+                                Continuar
+                            </button>
+                        </Link>
+
                     </div>
                 </>
             )}

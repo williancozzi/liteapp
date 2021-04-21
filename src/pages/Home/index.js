@@ -31,7 +31,7 @@ function Home() {
 
     return (
         <div>
-            <Header cartCount={cartItems.length}></Header>
+            <Header cartCount={cartItems.length} cartActive={true}></Header>
             <div className="row">
                 <Main onAddItem={onAddItem} products={products}></Main>
                 <Cart onAddItem={onAddItem} onRemoveItem={onRemoveItem} cartItems={cartItems}></Cart>

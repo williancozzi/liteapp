@@ -3,8 +3,7 @@ import PurchaseCheckout from '../../components/PurchaseCheckout';
 
 function Checkout() {
     return (
-        <div>
-            <h1>Finalizar compra</h1>
+        <div className="checkout-container">
             <PurchaseCheckout></PurchaseCheckout>
         </div>
     )
