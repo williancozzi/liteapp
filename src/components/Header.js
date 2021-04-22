@@ -16,10 +16,10 @@ export default function Header(props) {
                 <div className="p-sides-10">
 
                     {cartCount ? (
-                        
+
                         <Link to={"/checkout"} >
                             <div className="center-flex">
-                            <span className="a">Sua cesta</span>
+                                <span className="a">Sua cesta</span>
                                 <span className="cart-count">{cartCount}</span>
                                 <img src={basketSvg} width="30" height="30" alt="basket" className="p-10"></img>
 
