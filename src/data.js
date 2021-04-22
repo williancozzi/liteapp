@@ -16,8 +16,8 @@ const data = {
             id: '2',
             description: 'Para as primeiras 2.000 consultas NFe',
             name: '2000 consultas - R$0,16/consulta',
-            price: 0.16 * 2000,
-            perConsultPrice: 0.09,
+            price: 0.08 * 2000,
+            perConsultPrice: 0.08,
             image: img2,
         },
         {
