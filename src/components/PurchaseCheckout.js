@@ -11,8 +11,6 @@ export default function Checkout() {
     const confirmPayment = () => {
         setLoading(true);
 
-
-
         setTimeout(() => {
             setLoading(false);
             setConfirmed(true);
