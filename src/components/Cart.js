@@ -12,7 +12,7 @@ export default function Cart(props) {
             <h2>Sumário da compra</h2>
             <div className="center-flex mt-40">
                 {cartItems.length === 0 &&
-                    <div className="basket">Sua cesta está vazia
+                    <div className="basket">Seu carrinho está vazio.
                         <div>
                             <img src={bag} alt={'empty bag'} className="image-custom" />
                         </div>
